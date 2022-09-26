@@ -29,12 +29,16 @@ class SignInPageMobilePortrait extends GetView<SignInLogic> {
           children: [
             Views.appBarView(
               text: 'Sign In',
+              onPressed: (){
+                Get.offNamed(AppPages.INTRODUCTION);
+              }
             ),
-            SizedBox(height: 100,),
             SingleChildScrollView(
+              scrollDirection: Axis.vertical,
               child: FormBuilder(
                 key: controller.formKey,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(
@@ -64,9 +68,6 @@ class SignInPageMobilePortrait extends GetView<SignInLogic> {
                           FormBuilderValidators.email(
                               errorText: "Please enter valid email"),
                         ])),
-                    const SizedBox(
-                      height: 20,
-                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 0.0, horizontal: 20.0),
@@ -89,7 +90,7 @@ class SignInPageMobilePortrait extends GetView<SignInLogic> {
                         label: '...........',
                         inputText: TextInputType.visiblePassword,
                         radiusValue: 10.0,
-                        letterSpace: 2.0,
+                        letterSpace: 5.0,
                         validator: FormBuilderValidators.compose([
                           FormBuilderValidators.required(
                               errorText: 'Please enter password'),
@@ -111,7 +112,9 @@ class SignInPageMobilePortrait extends GetView<SignInLogic> {
                     ),
                     Align(
                       alignment: Alignment.centerRight,
-                      child: Buttons.textButton(texts: "Forgot password?",color: ConstColors.TEXTGREY,align: Alignment.centerRight,fontWeight: FontWeight.w500),
+                      child: Buttons.textButton(texts: "Forgot password?",color: ConstColors.TEXTGREY,align: Alignment.centerRight,fontWeight: FontWeight.w500,onPressed: (){
+                        Get.offNamed(AppPages.PASSWORDRECOVERY);
+                      }),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import '../../../shared/assets/images.dart';
+import '../../../shared/constants/colors.dart';
 import '../../../shared/constants/font_sizes.dart';
 import '../../../widgets/texts.dart';
 class SplashPageMobilePortrait extends GetView<SplashLogic> {
@@ -14,7 +15,7 @@ class SplashPageMobilePortrait extends GetView<SplashLogic> {
   Widget build(BuildContext context) {
     Get.find<SplashLogic>();
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: ConstColors.BACKGROUND,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

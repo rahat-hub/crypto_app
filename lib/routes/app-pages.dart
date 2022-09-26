@@ -4,5 +4,6 @@ abstract class AppPages{
   static const String SIGNIN = '/signin';
   static const String SIGNUP = '/signup';
   static const String PASSWORDRECOVERY = '/passwordrecovery';
+  static const String PASSWORDRECOVERYCONFIRM = '/passwordrecoveryconfirm';
   static const String DASHBOARD = '/dashboard';
 }

@@ -9,21 +9,19 @@ import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class Views{
-  static appBarView({text,}){
+  static appBarView({text,onPressed}){
     return Container(
       width: double.infinity,
-      height: 50,
+      height: 70,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 0.0,horizontal: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             IconButton(
               icon: const Icon(Icons.arrow_back,color: ConstColors.WHITE,),
-              onPressed: (){
-                Get.offNamed(AppPages.INTRODUCTION);
-              },
+              onPressed: () => onPressed (),
             ),
             Texts.texts(texts: text,fontWeight: FontWeight.w700,colors: ConstColors.TEXTWHITE,textSize: FontSizes.BIG,),
             SvgPicture.asset(Images.appBarScanner),
