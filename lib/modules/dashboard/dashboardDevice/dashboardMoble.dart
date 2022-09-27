@@ -1,11 +1,13 @@
 import 'package:crypto_app/modules/dashboard/dashboardLayers/bottomLayer.dart';
 import 'package:crypto_app/modules/dashboard/dashboardLayers/topLayer.dart';
+import 'package:crypto_app/shared/constants/font_sizes.dart';
 import 'package:crypto_app/widgets/views.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
 import '../../../shared/constants/colors.dart';
+import '../../../widgets/texts.dart';
+import '../dashboardLayers/midLayer.dart';
 import '../dashboard_logic.dart';
 
 class HomePageMobilePortrait extends GetView<DashboardLogic> {
@@ -37,9 +39,32 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
               shouldIconPulse: false,
             );
           }),
-      body: ListView(
+      body: Column(
         children: [
-              HomePageTopLayer.homePageTopLayer(),
+          HomePageTopLayer.homePageTopLayer(),
+          SizedBox(height: 15,),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text('Live price',style: Texts.textStyles(
+                  textSize: FontSizes.BIG,
+                  fontWeight: FontWeight.w400,
+                  colors: ConstColors.TEXTWHITE,
+                  ),
+                ),
+                SizedBox(width: 200,),
+                Text('See All',style: Texts.textStyles(
+                  textSize: FontSizes.MEDIUM,
+                  fontWeight: FontWeight.w300,
+                  colors: ConstColors.TEXTWHITE,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          HomePageMidLayer.homePageMidLayer(),
         ],
       ),
       bottomNavigationBar: HomePageBottomLayer.homePageBottomLayer(),
