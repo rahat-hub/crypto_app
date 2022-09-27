@@ -43,4 +43,33 @@ class Views{
       ),
     );
   }
+  static AppBarViewHome({titletext,onPressed,subtitletext}){
+    return AppBar(
+      backgroundColor: ConstColors.BACKGROUND,
+      elevation: 2,
+      title: Padding(
+        padding: const EdgeInsets.fromLTRB(0,30,0,0),
+        child: Text(titletext),
+      ),
+      bottom: PreferredSize(
+        preferredSize: Size.fromHeight(20),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 15),
+          child: Align(alignment: Alignment.centerLeft,child: Text(subtitletext,style: Texts.textStyles(textSize: FontSizes.MEDIUM,fontWeight: FontWeight.w300,colors: ConstColors.GREY),)),
+        ),
+      ),
+      shadowColor: ConstColors.TEXTBLUE,
+      leadingWidth: 20,
+      titleTextStyle: Texts.textStyles(colors: ConstColors.TEXTWHITE,fontWeight: FontWeight.w700,textSize: FontSizes.BIG),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0,22,0,0),
+          child: IconButton(
+            icon: const Icon(Icons.notifications,color: ConstColors.WHITE,size: 25),
+            onPressed: () => onPressed (),
+          ),
+        ),
+      ],
+    );
+  }
 }

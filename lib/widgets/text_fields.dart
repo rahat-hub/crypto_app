@@ -1,11 +1,10 @@
 import 'package:crypto_app/shared/constants/colors.dart';
-import 'package:crypto_app/shared/constants/font_sizes.dart';
 import 'package:crypto_app/widgets/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 class TextFieldView{
-  static formField({key,validator,name,label,obscureText,inputText,radiusValue,paddingValue,letterSpace}){
+  static formField({key,validator,name,label,obscureText,inputText,radiusValue,paddingValue,letterSpace,textSize}){
     return Padding(
       padding: EdgeInsets.all(paddingValue),
       child: FormBuilderTextField(
@@ -15,11 +14,11 @@ class TextFieldView{
         keyboardType: inputText,
         obscureText: obscureText,
         validator: validator,
-        style: Texts.textStyles(textSize: FontSizes.MEDIUM,colors: ConstColors.GREY,fontWeight: FontWeight.w300),
+        style: Texts.textStyles(textSize: textSize,colors: ConstColors.GREY,fontWeight: FontWeight.w300,),
         decoration: InputDecoration(
           filled: true,
           hintText: label,
-          hintStyle: Texts.textStyles(textSize: FontSizes.MEDIUM,colors: ConstColors.GREY,fontWeight: FontWeight.w300,letterSpace: letterSpace),
+          hintStyle: Texts.textStyles(textSize: textSize,colors: ConstColors.GREY,fontWeight: FontWeight.w300,letterSpace: letterSpace),
           border: OutlineInputBorder(
             borderSide: const BorderSide(
               color: ConstColors.GREY,

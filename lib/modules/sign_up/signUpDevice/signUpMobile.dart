@@ -29,87 +29,148 @@ class SignUpPageMobilePortrait extends GetView<SignUpLogic> {
           children: [
             Views.appBarView(
               text: 'Sign Up',
+              onPressed: (){
+                Get.offNamed(AppPages.SIGNIN);
+              }
             ),
-            ListView(
-              //scrollDirection: Axis.horizontal,
-              children: [
-                FormBuilder(
-                  key: controller.formKey,
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 0.0, horizontal: 25.0),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Texts.texts(
-                            texts: 'Name',
-                            colors: ConstColors.TEXTWHITE,
-                            fontWeight: FontWeight.w400,
-                            align: TextAlign.start,
-                            textSize: FontSizes.MEDIUM,
-                          ),
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: FormBuilder(
+                key: controller.formKey,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 0.0, horizontal: 25.0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Texts.texts(
+                          texts: 'Name',
+                          colors: ConstColors.TEXTWHITE,
+                          fontWeight: FontWeight.w400,
+                          align: TextAlign.start,
+                          textSize: FontSizes.MEDIUM,
                         ),
                       ),
-                      TextFieldView.formField(
-                          paddingValue: 20.0,
-                          name: 'name',
-                          obscureText: false,
-                          key: controller.emailFieldKey,
-                          label: 'Rahat',
-                          inputText: TextInputType.name,
-                          radiusValue: 10.0,
-                          validator: FormBuilderValidators.compose([
-                            FormBuilderValidators.required(
-                                errorText: "Enter Your name"),
-                            FormBuilderValidators.minLength(5,
-                                errorText: "name is too short"),
-                          ])),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 0.0, horizontal: 25.0),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Texts.texts(
-                            texts: 'Mail',
-                            colors: ConstColors.TEXTWHITE,
-                            fontWeight: FontWeight.w400,
-                            align: TextAlign.start,
-                            textSize: FontSizes.MEDIUM,
-                          ),
+                    ),
+                    TextFieldView.formField(
+                        paddingValue: 20.0,
+                        name: 'name',
+                        obscureText: false,
+                        key: controller.nameFieldKey,
+                        label: 'Rahat',
+                        inputText: TextInputType.name,
+                        radiusValue: 10.0,
+                        validator: FormBuilderValidators.compose([
+                          FormBuilderValidators.required(
+                              errorText: "Enter Your name"),
+                          FormBuilderValidators.minLength(5,
+                              errorText: "name is too short"),
+                        ])),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 0.0, horizontal: 25.0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Texts.texts(
+                          texts: 'Mail',
+                          colors: ConstColors.TEXTWHITE,
+                          fontWeight: FontWeight.w400,
+                          align: TextAlign.start,
+                          textSize: FontSizes.MEDIUM,
                         ),
                       ),
-                      TextFieldView.formField(
-                          paddingValue: 20.0,
-                          name: 'mail',
-                          obscureText: false,
-                          key: controller.emailFieldKey,
-                          label: 'Crypto@gmail.com',
-                          inputText: TextInputType.emailAddress,
-                          radiusValue: 10.0,
-                          validator: FormBuilderValidators.compose([
-                            FormBuilderValidators.required(
-                                errorText: "Enter mail"),
-                            FormBuilderValidators.email(
-                                errorText: "mail is not valid"),
-                          ])),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 20.0, horizontal: 20.0),
-                        child: Buttons.buttons(
-                            circularValue: 10.0,
-                            text: "Sign Up",
-                            onPressed: () {
-                              if (controller.formKey.currentState!.validate()) {
-                                controller.formKey.currentState!.save();
-                                Get.offNamed(AppPages.SIGNIN);
-                              }
-                            }),
+                    ),
+                    TextFieldView.formField(
+                        paddingValue: 20.0,
+                        name: 'mail',
+                        obscureText: false,
+                        key: controller.emailFieldKey,
+                        label: 'Crypto@gmail.com',
+                        inputText: TextInputType.emailAddress,
+                        radiusValue: 10.0,
+                        validator: FormBuilderValidators.compose([
+                          FormBuilderValidators.required(
+                              errorText: "Enter mail"),
+                          FormBuilderValidators.email(
+                              errorText: "mail is not valid"),
+                        ])),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 0.0, horizontal: 25.0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Texts.texts(
+                          texts: 'Password',
+                          colors: ConstColors.TEXTWHITE,
+                          fontWeight: FontWeight.w400,
+                          align: TextAlign.start,
+                          textSize: FontSizes.MEDIUM,
+                        ),
                       ),
-                    ],
-                  ),
+                    ),
+                    TextFieldView.formField(
+                        paddingValue: 20.0,
+                        name: 'Password',
+                        obscureText: true,
+                        key: controller.pass1FieldKey,
+                        label: '. . . . . .',
+                        textSize: FontSizes.BIG,
+                        letterSpace: 2,
+                        inputText: TextInputType.visiblePassword,
+                        radiusValue: 10.0,
+                        validator: FormBuilderValidators.compose([
+                          FormBuilderValidators.required(
+                              errorText: "Enter password"),
+                          FormBuilderValidators.minLength(6,
+                              errorText: "password must be 6 character"),
+                        ])),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 0.0, horizontal: 25.0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Texts.texts(
+                          texts: 'Password',
+                          colors: ConstColors.TEXTWHITE,
+                          fontWeight: FontWeight.w400,
+                          align: TextAlign.start,
+                          textSize: FontSizes.MEDIUM,
+                        ),
+                      ),
+                    ),
+                    TextFieldView.formField(
+                        paddingValue: 20.0,
+                        name: 'Password',
+                        obscureText: true,
+                        key: controller.pass2FieldKey,
+                        label: '. . . . .',
+                        inputText: TextInputType.visiblePassword,
+                        radiusValue: 10.0,
+                        letterSpace: 5,
+                        textSize: FontSizes.BIG,
+                        validator: FormBuilderValidators.compose([
+                          FormBuilderValidators.required(
+                              errorText: "Enter password"),
+                          FormBuilderValidators.minLength(6,
+                              errorText: "password must be 6 character"),
+                        ])),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 20.0, horizontal: 20.0),
+                      child: Buttons.buttons(
+                          circularValue: 10.0,
+                          text: "Sign Up",
+                          onPressed: () {
+                            if (controller.formKey.currentState!.validate()) {
+                              controller.formKey.currentState!.save();
+                              Get.offNamed(AppPages.SIGNIN);
+                            }
+                          }),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ],
         ),
