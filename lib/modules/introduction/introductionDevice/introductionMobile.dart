@@ -33,9 +33,9 @@ class IntroductionPageMobilePortrait extends GetView<IntroductionLogic> {
                 Get.offNamed(AppPages.SIGNIN);
               })),
       pages: [
-        Views.pageViewModle(text: 'We make crypto clear \n simple',imageValue: Images.introduction_logo_1),
-        Views.pageViewModle(text: 'Take your first step int safe,\n secure crypto investing',imageValue: Images.introduction_logo_2),
-        Views.pageViewModle(text: '24/7 access to full service\n customer support',imageValue: Images.introduction_logo_3),
+        Views.pageViewModle(text: 'We make crypto clear \n simple',imageValue: Images.introductionLogo_1),
+        Views.pageViewModle(text: 'Take your first step int safe,\n secure crypto investing',imageValue: Images.introductionLogo_2),
+        Views.pageViewModle(text: '24/7 access to full service\n customer support',imageValue: Images.introductionLogo_3),
       ],
       //onDone: () => Get.toNamed(AppPages.SIGNIN),
       //onSkip: () => _onIntroEnd(context),

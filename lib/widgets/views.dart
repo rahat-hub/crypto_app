@@ -1,11 +1,9 @@
-import 'package:crypto_app/routes/app-pages.dart';
 import 'package:crypto_app/shared/assets/images.dart';
 import 'package:crypto_app/shared/constants/colors.dart';
 import 'package:crypto_app/shared/constants/font_sizes.dart';
 import 'package:crypto_app/widgets/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class Views{
@@ -70,6 +68,46 @@ class Views{
           ),
         ),
       ],
+    );
+  }
+  static cardViewEvent({leftTitleText,leftSubText,logoImage,rightTitleText,rightSubText,chartImage,logoBackColor}){
+    return SizedBox(
+      width: double.infinity,
+      height: 80,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: logoBackColor,
+              ),
+              child: SizedBox(
+                width: 10,
+                height: 10,
+                child: Image.asset(logoImage),
+              )
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(leftTitleText,style: Texts.textStyles(textSize: FontSizes.BIG,fontWeight: FontWeight.w500,colors: ConstColors.TEXTWHITE,)),
+              Text(leftSubText,style: Texts.textStyles(textSize: FontSizes.MEDIUM,fontWeight: FontWeight.w300,colors: ConstColors.GREY,)),
+            ],
+          ),
+
+          Image.asset(chartImage,),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(rightTitleText,style: Texts.textStyles(textSize: FontSizes.BIG,fontWeight: FontWeight.w500,colors: ConstColors.TEXTWHITE,)),
+              Text(rightSubText,style:  Texts.textStyles(textSize: FontSizes.MEDIUM,fontWeight: FontWeight.w300,colors: ConstColors.GREY,)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

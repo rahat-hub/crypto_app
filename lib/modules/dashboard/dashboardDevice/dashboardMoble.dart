@@ -44,9 +44,9 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
           HomePageTopLayer.homePageTopLayer(),
           SizedBox(height: 15,),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Live price',style: Texts.textStyles(
                   textSize: FontSizes.BIG,
@@ -54,7 +54,6 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
                   colors: ConstColors.TEXTWHITE,
                   ),
                 ),
-                SizedBox(width: 200,),
                 Text('See All',style: Texts.textStyles(
                   textSize: FontSizes.MEDIUM,
                   fontWeight: FontWeight.w300,
@@ -64,6 +63,7 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
               ],
             ),
           ),
+          SizedBox(height: 30,),
           HomePageMidLayer.homePageMidLayer(),
         ],
       ),

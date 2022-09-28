@@ -7,7 +7,7 @@ class HomePageBottomLayer{
       type: BottomNavigationBarType.fixed,
       backgroundColor: ConstColors.BACKGROUND,
       currentIndex: 0,
-      selectedIconTheme: IconThemeData(size: 25,color: Colors.white,shadows: [
+      selectedIconTheme: const IconThemeData(size: 25,color: Colors.white,shadows: [
         Shadow(
           blurRadius: 50,
           color: Colors.blueAccent,
@@ -18,11 +18,12 @@ class HomePageBottomLayer{
       items: const [
         BottomNavigationBarItem(
           label: '',
+          backgroundColor: Colors.deepOrange,
           icon: Icon(Icons.grid_view),
         ),
         BottomNavigationBarItem(
           label: '',
-          icon: Icon(Icons.auto_graph_rounded),
+          icon: Icon(Icons.auto_graph_outlined),
         ),
         BottomNavigationBarItem(
           label: '',
@@ -35,5 +36,10 @@ class HomePageBottomLayer{
       ],
       iconSize: 25,
     );
+  }
+}
+class HomePageBottomLayer2{
+  static homePageBottomLayer2(){
+    return Card();
   }
 }

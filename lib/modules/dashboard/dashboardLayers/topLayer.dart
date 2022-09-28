@@ -9,10 +9,10 @@ import '../../../widgets/texts.dart';
 class HomePageTopLayer{
   static homePageTopLayer(){
     return Padding(
-      padding: const EdgeInsets.all(25.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
       child: Container(
-        width: 300,
-        height: 230,
+        width: double.infinity,
+        height: 220,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           gradient: const LinearGradient(
@@ -35,10 +35,10 @@ Widget cardDesign(){
       children: [
         Align(
             alignment: Alignment.topRight,
-            child: SvgPicture.asset(Images.credit_card_pay_pass_icon),
+            child: SvgPicture.asset(Images.creditCardPayPassIcon),
         ),
         SizedBox(height: 10,),
-        SvgPicture.asset(Images.credit_card_sim_logo,width: 50,),
+        SvgPicture.asset(Images.creditCardSimLogo,width: 50,),
         SizedBox(height: 10,),
         Text('1234    5678    90000   0000',style: Texts.textStyles(
           colors: ConstColors.TEXTWHITE,
@@ -64,7 +64,7 @@ Widget cardDesign(){
         ),
         Align(
           alignment: Alignment.topRight,
-          child: SvgPicture.asset(Images.master_card_logo,width: 60,),
+          child: SvgPicture.asset(Images.masterCardLogo,width: 60,),
         ),
       ],
     ),

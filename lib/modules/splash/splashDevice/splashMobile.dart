@@ -20,7 +20,7 @@ class SplashPageMobilePortrait extends GetView<SplashLogic> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(Images.splash_logo),
+            SvgPicture.asset(Images.splashLogo),
             Texts.texts(texts: "Cryptocurrency",align: TextAlign.center,textSize: FontSizes.LARGE,fontWeight: FontWeight.w500),
           ],
         ),

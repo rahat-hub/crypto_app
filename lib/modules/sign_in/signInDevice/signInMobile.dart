@@ -103,10 +103,11 @@ class SignInPageMobilePortrait extends GetView<SignInLogic> {
                         circularValue: 10.0,
                           text: "Sign In",
                           onPressed: () {
-                            if (controller.formKey.currentState!.validate()) {
-                              controller.formKey.currentState!.save();
-                              Get.offAllNamed(AppPages.DASHBOARD);
-                            }
+                            /*if (controller.formKey.currentState!.validate()) {
+                              //controller.formKey.currentState!.save();
+
+                            }*/
+                            Get.offAllNamed(AppPages.DASHBOARD);
                           }),
                     ),
                     Align(
