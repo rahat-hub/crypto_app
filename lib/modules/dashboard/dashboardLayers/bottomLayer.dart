@@ -1,45 +1,32 @@
-import 'package:crypto_app/shared/constants/colors.dart';
 import 'package:flutter/material.dart';
+import '../../../widgets/views.dart';
 
 class HomePageBottomLayer{
   static homePageBottomLayer(){
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      backgroundColor: ConstColors.BACKGROUND,
-      currentIndex: 0,
-      selectedIconTheme: const IconThemeData(size: 25,color: Colors.white,shadows: [
-        Shadow(
-          blurRadius: 50,
-          color: Colors.blueAccent,
-        ),
-      ]),
-      selectedItemColor: ConstColors.TEXTWHITE,
-      unselectedItemColor: ConstColors.GREY,
-      items: const [
-        BottomNavigationBarItem(
-          label: '',
-          backgroundColor: Colors.deepOrange,
-          icon: Icon(Icons.grid_view),
-        ),
-        BottomNavigationBarItem(
-          label: '',
-          icon: Icon(Icons.auto_graph_outlined),
-        ),
-        BottomNavigationBarItem(
-          label: '',
-          icon: Icon(Icons.credit_card),
-        ),
-        BottomNavigationBarItem(
-          label: '',
-          icon: Icon(Icons.person_sharp),
-        ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Views.homePageBottomLayer2(
+            icon: Icons.grid_view,
+            onPressed: (){
+              print("Hello Bro");
+            }),
+        Views.homePageBottomLayer2(
+            icon: Icons.auto_graph_outlined,
+            onPressed: (){
+              print("Hello Rahat");
+            }),
+        Views.homePageBottomLayer2(
+            icon: Icons.credit_card,
+            onPressed: (){
+              print("Hello SR");
+            }),
+        Views.homePageBottomLayer2(
+            icon: Icons.person,
+            onPressed: (){
+              print("Hello BP");
+            }),
       ],
-      iconSize: 25,
     );
-  }
-}
-class HomePageBottomLayer2{
-  static homePageBottomLayer2(){
-    return Card();
   }
 }

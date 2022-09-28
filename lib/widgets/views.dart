@@ -110,4 +110,43 @@ class Views{
       ),
     );
   }
+
+  static appBarViewHome2({TitleText, SubTitleText, icon,onPressed}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            children: [
+              Text(
+                TitleText,
+                style: Texts.textStyles(
+                    textSize: FontSizes.BIG,
+                    colors: ConstColors.TEXTWHITE,
+                    fontWeight: FontWeight.w600),
+              ),
+              Text(
+                SubTitleText,
+                style: Texts.textStyles(
+                    textSize: FontSizes.REGULAR,
+                    colors: ConstColors.GREY,
+                    fontWeight: FontWeight.w200),
+              )
+            ],
+          ),
+          IconButton(
+            icon: Icon(icon, color: ConstColors.WHITE, size: 25),
+            onPressed: () => onPressed(),
+          )
+        ],
+      ),
+    );
+  }
+  static homePageBottomLayer2({icon,onPressed}){
+    return IconButton(
+      icon: Icon(icon, color: ConstColors.WHITE, size: 25),
+      onPressed: () => onPressed(),
+    );
+  }
 }

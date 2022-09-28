@@ -21,26 +21,28 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
     Get.find<DashboardLogic>();
     return Scaffold(
       backgroundColor: ConstColors.BACKGROUND,
-      appBar: Views.AppBarViewHome(
-          titletext: 'Hello valid',
-          subtitletext: 'welcome again',
-          onPressed: () {
-            Get.snackbar(
-              'Notification',
-              'No notifications',
-              snackPosition: SnackPosition.BOTTOM,
-              backgroundColor: ConstColors.TRANSPARENT,
-              colorText: ConstColors.GREY,
-              margin: EdgeInsets.all(20),
-              icon: const Icon(
-                Icons.thumb_up,
-                color: ConstColors.BLUE,
-              ),
-              shouldIconPulse: false,
-            );
-          }),
       body: Column(
         children: [
+          SizedBox(height: 20,),
+          Views.appBarViewHome2(
+              TitleText: 'Hello Vlad',
+              SubTitleText: 'Welcome back!',
+              icon: Icons.notifications,
+              onPressed: (){
+                Get.snackbar(
+                  'Notification',
+                  'No notifications',
+                  snackPosition: SnackPosition.BOTTOM,
+                  backgroundColor: ConstColors.TRANSPARENT,
+                  colorText: ConstColors.GREY,
+                  margin: EdgeInsets.all(20),
+                  icon: const Icon(
+                    Icons.thumb_up,
+                    color: ConstColors.BLUE,
+                  ),
+                  shouldIconPulse: false,
+                );
+              } ),
           HomePageTopLayer.homePageTopLayer(),
           SizedBox(height: 15,),
           Padding(
@@ -63,7 +65,6 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
               ],
             ),
           ),
-          SizedBox(height: 30,),
           HomePageMidLayer.homePageMidLayer(),
         ],
       ),

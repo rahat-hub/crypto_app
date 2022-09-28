@@ -7,9 +7,9 @@ import '../../../widgets/views.dart';
 class HomePageMidLayer{
   static homePageMidLayer(){
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15,),
       child: SizedBox(
-        height: 350,
+        height: 400,
         width: double.infinity,
         child: ListView(
           scrollDirection: Axis.vertical,
@@ -72,6 +72,10 @@ class HomePageMidLayer{
                 logoBackColor: ConstColors.BTC_BACK_COLOR,
                 rightTitleText: '\$29,850.15',
                 rightSubText: '2.73 BTC'),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
+              child: Divider(thickness: 1,color: ConstColors.GREY,),
+            ),
             Views.cardViewEvent(
                 logoImage: Images.ethLogo,
                 leftTitleText: 'ETC',
@@ -80,6 +84,10 @@ class HomePageMidLayer{
                 logoBackColor: ConstColors.ETH_BACK_COLOR,
                 rightTitleText: '\$10,850.15',
                 rightSubText: '47.61 ETC'),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
+              child: Divider(thickness: 1,color: ConstColors.GREY,),
+            ),
             Views.cardViewEvent(
                 logoImage: Images.ltcLogo,
                 leftTitleText: 'LTC',
@@ -88,6 +96,10 @@ class HomePageMidLayer{
                 logoBackColor: ConstColors.LTC_BACK_COLOR,
                 rightTitleText: '\$3,676.76',
                 rightSubText: '39,27 LTC'),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
+              child: Divider(thickness: 1,color: ConstColors.GREY,),
+            ),
             Views.cardViewEvent(
                 logoImage: Images.xrpLogo,
                 leftTitleText: 'XRP',
@@ -96,15 +108,11 @@ class HomePageMidLayer{
                 logoBackColor: ConstColors.XRP_BACK_COLOR,
                 rightTitleText: '\$5,242.62',
                 rightSubText: '16447,65 XRP'),
-
           ],
         ),
       ),
     );
   }
-}
-class CardViewEvent{
-
 }
 
 
