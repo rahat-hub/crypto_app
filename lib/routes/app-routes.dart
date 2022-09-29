@@ -63,42 +63,42 @@ class AppRoutes{
     ),
     GetPage(
         name: AppPages.PASSWORDRECOVERYCONFIRM,
-        page: () => Password_recovey_confirmPage(),
+        page: () => const Password_recovey_confirmPage(),
         bindings: [
           Password_recovey_confirmBinding(),
         ]
     ),
     GetPage(
         name: AppPages.DASHBOARD,
-      page: () => DashboardPage(),
+      page: () => const DashboardPage(),
       bindings: [
         DashboardBinding(),
       ]
     ),
     GetPage(
         name: AppPages.PROFILE,
-        page: () => ProfilePage(),
+        page: () => const ProfilePage(),
         bindings: [
           ProfileBinding(),
         ]
     ),
     GetPage(
         name: AppPages.CARDDETAILS,
-        page: () => CarddetailsPage(),
+        page: () => const CarddetailsPage(),
         bindings: [
           CarddetailsBinding(),
         ]
     ),
     GetPage(
       name: AppPages.WALLET,
-      page: () => WalletPage(),
+      page: () => const WalletPage(),
       bindings: [
         WalletBinding(),
       ],
     ),
     GetPage(
       name: AppPages.TRADING,
-      page: () => TradingPage(),
+      page: () => const TradingPage(),
       bindings: [
         TradingBinding(),
       ],

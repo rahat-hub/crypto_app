@@ -19,7 +19,7 @@ class WalletPageMobilePortrait extends GetView<WalletLogic> {
       backgroundColor: ConstColors.BACKGROUND,
       body: Column(
         children: [
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Views.appBarViewHome2(
               TitleText: 'Wallet',
               SubTitleText: '',
@@ -31,7 +31,7 @@ class WalletPageMobilePortrait extends GetView<WalletLogic> {
                   snackPosition: SnackPosition.BOTTOM,
                   backgroundColor: ConstColors.TRANSPARENT,
                   colorText: ConstColors.GREY,
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   icon: const Icon(
                     Icons.thumb_up,
                     color: ConstColors.BLUE,

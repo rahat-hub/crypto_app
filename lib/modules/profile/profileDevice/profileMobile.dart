@@ -21,7 +21,7 @@ class ProfilePageMobilePortrait extends GetView<ProfileLogic> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Views.appBarViewHome2(
               TitleText: 'My Profile',
               SubTitleText: '',
@@ -33,7 +33,7 @@ class ProfilePageMobilePortrait extends GetView<ProfileLogic> {
                   snackPosition: SnackPosition.BOTTOM,
                   backgroundColor: ConstColors.TRANSPARENT,
                   colorText: ConstColors.GREY,
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   icon: const Icon(
                     Icons.thumb_up,
                     color: ConstColors.BLUE,
@@ -43,12 +43,12 @@ class ProfilePageMobilePortrait extends GetView<ProfileLogic> {
               }
           ),
           ProfilePageTopLayer.profilePageTopLayer(),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Align(
             alignment: Alignment.centerLeft,
             child: ProfileMidLayer.profileMidLayer(),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           ProfileBottomLayer.profilePageBottomLayer(),
         ],
       ),

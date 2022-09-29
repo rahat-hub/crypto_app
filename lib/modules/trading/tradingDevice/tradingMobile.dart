@@ -19,7 +19,7 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
       backgroundColor: ConstColors.BACKGROUND,
       body: Column(
         children: [
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Views.appBarViewHome2(
               TitleText: 'Trading',
               SubTitleText: '',
@@ -31,7 +31,7 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
                   snackPosition: SnackPosition.BOTTOM,
                   backgroundColor: ConstColors.TRANSPARENT,
                   colorText: ConstColors.GREY,
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   icon: const Icon(
                     Icons.thumb_up,
                     color: ConstColors.BLUE,

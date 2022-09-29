@@ -10,22 +10,22 @@ class HomePageBottomLayer{
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Views.homePageBottomLayer2(
-            icon: Icon(Icons.grid_view,color: ConstColors.TEXTWHITE,size: 25,),
+            icon: const Icon(Icons.grid_view,color: ConstColors.TEXTWHITE,size: 25,),
             onPressed: (){
               Get.offNamed(AppPages.DASHBOARD);
             }),
         Views.homePageBottomLayer2(
-            icon: Icon(Icons.auto_graph_outlined,color: ConstColors.TEXTWHITE,size: 25,),
+            icon: const Icon(Icons.auto_graph_outlined,color: ConstColors.TEXTWHITE,size: 25,),
             onPressed: (){
               Get.offNamed(AppPages.TRADING);
             }),
         Views.homePageBottomLayer2(
-            icon: Icon(Icons.credit_card,color: ConstColors.TEXTWHITE,size: 25,),
+            icon: const Icon(Icons.credit_card,color: ConstColors.TEXTWHITE,size: 25,),
             onPressed: (){
               Get.offNamed(AppPages.WALLET);
             }),
         Views.homePageBottomLayer2(
-            icon: Icon(Icons.person,color: ConstColors.TEXTWHITE,size: 25,),
+            icon: const Icon(Icons.person,color: ConstColors.TEXTWHITE,size: 25,),
             onPressed: (){
               Get.offNamed(AppPages.PROFILE);
             }),

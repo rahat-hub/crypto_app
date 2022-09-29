@@ -10,7 +10,7 @@ class IntroductionPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final logic = Get.find<IntroductionLogic>();
+    Get.find<IntroductionLogic>();
 
     return ResponsiveBuilder(builder: (context, sizingInformation) {
       return ScreenTypeLayout(

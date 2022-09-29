@@ -11,7 +11,7 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final logic = Get.find<SignUpLogic>();
+    Get.find<SignUpLogic>();
 
     return ResponsiveBuilder(builder: (context, sizingInformation) {
       return ScreenTypeLayout(

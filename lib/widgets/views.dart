@@ -8,7 +8,7 @@ import 'package:introduction_screen/introduction_screen.dart';
 
 class Views{
   static appBarView({text,onPressed}){
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 70,
       child: Padding(
@@ -37,7 +37,7 @@ class Views{
         bodyTextStyle: Texts.textStyles(textSize: FontSizes.BIG,fontWeight: FontWeight.w600),
         bodyPadding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
         //pageColor: Colors.white,
-        imagePadding: EdgeInsets.fromLTRB(0, 150, 0, 0),
+        imagePadding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
       ),
     );
   }
@@ -50,7 +50,7 @@ class Views{
         child: Text(titletext),
       ),
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(20),
+        preferredSize: const Size.fromHeight(20),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 15),
           child: Align(alignment: Alignment.centerLeft,child: Text(subtitletext,style: Texts.textStyles(textSize: FontSizes.MEDIUM,fontWeight: FontWeight.w300,colors: ConstColors.GREY),)),

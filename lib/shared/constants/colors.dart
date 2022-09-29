@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ConstColors {
   static const Color WHITE = Color(0xFFFFFFFF);
-  static const Color TRANSPARENT = Color(0);
+  static const Color TRANSPARENT = Color(0x00000000);
   static const Color GREY = Color(0xFF8D8D8D);
   static const Color BLUE = Color(0xFF4B12EF);
 

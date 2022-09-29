@@ -23,7 +23,7 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
       backgroundColor: ConstColors.BACKGROUND,
       body: Column(
         children: [
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Views.appBarViewHome2(
               TitleText: 'Hello Vlad',
               SubTitleText: 'Welcome back!',
@@ -35,7 +35,7 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
                   snackPosition: SnackPosition.BOTTOM,
                   backgroundColor: ConstColors.TRANSPARENT,
                   colorText: ConstColors.GREY,
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   icon: const Icon(
                     Icons.thumb_up,
                     color: ConstColors.BLUE,
@@ -44,7 +44,7 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
                 );
               } ),
           HomePageTopLayer.homePageTopLayer(),
-          SizedBox(height: 15,),
+          const SizedBox(height: 15,),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(

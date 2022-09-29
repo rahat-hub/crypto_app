@@ -7,9 +7,11 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'password_recovey_confirm_logic.dart';
 
 class Password_recovey_confirmPage extends StatelessWidget {
+  const Password_recovey_confirmPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final logic = Get.find<Password_recovey_confirmLogic>();
+    Get.find<Password_recovey_confirmLogic>();
 
     return ResponsiveBuilder(builder: (context, sizingInformation) {
       return ScreenTypeLayout(

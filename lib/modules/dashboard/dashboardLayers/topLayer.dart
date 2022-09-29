@@ -37,15 +37,15 @@ Widget cardDesign(){
             alignment: Alignment.topRight,
             child: SvgPicture.asset(Images.creditCardPayPassIcon),
         ),
-        SizedBox(height: 10,),
+        const SizedBox(height: 10,),
         SvgPicture.asset(Images.creditCardSimLogo,width: 50,),
-        SizedBox(height: 10,),
+        const SizedBox(height: 10,),
         Text('1234    5678    90000   0000',style: Texts.textStyles(
           colors: ConstColors.TEXTWHITE,
           fontWeight: FontWeight.w300,
           textSize: FontSizes.MEDIUM,),
         ),
-        SizedBox(height: 15,),
+        const SizedBox(height: 15,),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -54,7 +54,7 @@ Widget cardDesign(){
               fontWeight: FontWeight.w300,
               textSize: FontSizes.SMALL,),
             ),
-            SizedBox(width: 30,),
+            const SizedBox(width: 30,),
             Text('12/24',style: Texts.textStyles(
               colors: ConstColors.TEXTWHITE,
               fontWeight: FontWeight.w300,

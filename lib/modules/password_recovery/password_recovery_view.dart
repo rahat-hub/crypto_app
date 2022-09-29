@@ -11,7 +11,7 @@ class PasswordRecoveryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final logic = Get.find<PasswordRecoveryLogic>();
+    Get.find<PasswordRecoveryLogic>();
 
     return ResponsiveBuilder(builder: (context, sizingInformation) {
       return ScreenTypeLayout(

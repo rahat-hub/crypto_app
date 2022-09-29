@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 class ProfilePageTopLayer{
   static profilePageTopLayer(){
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 200,
       child: Row(
@@ -12,7 +12,7 @@ class ProfilePageTopLayer{
           Container(
             height: 50,
             width: 50,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               color: ConstColors.GREY,
             ),

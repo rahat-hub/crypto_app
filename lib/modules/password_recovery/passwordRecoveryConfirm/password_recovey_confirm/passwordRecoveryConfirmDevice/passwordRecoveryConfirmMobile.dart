@@ -24,7 +24,7 @@ class PasswordRecoveryConfirmPageMobilePortrait extends GetView<Password_recovey
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Texts.texts(texts: 'Verify your mail',align: TextAlign.center,textSize: FontSizes.LARGE,fontWeight: FontWeight.w900,colors: ConstColors.TEXTWHITE),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Texts.texts(texts: 'Go to mail and click the button to verify your account',align: TextAlign.center,textSize: FontSizes.BIG,fontWeight: FontWeight.w600,colors: ConstColors.TEXTGREY),
           ],
         ),
