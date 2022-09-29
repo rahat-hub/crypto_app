@@ -1,10 +1,14 @@
 import 'package:crypto_app/modules/wallet/walletLayers/bottomLayer.dart';
+import 'package:crypto_app/modules/wallet/walletLayers/midLayer.dart';
+import 'package:crypto_app/modules/wallet/walletLayers/toplayer.dart';
 import 'package:crypto_app/modules/wallet/wallet_logic.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../shared/constants/colors.dart';
+import '../../../shared/constants/font_sizes.dart';
+import '../../../widgets/texts.dart';
 import '../../../widgets/views.dart';
 
 class WalletPageMobilePortrait extends GetView<WalletLogic> {
@@ -19,7 +23,7 @@ class WalletPageMobilePortrait extends GetView<WalletLogic> {
       backgroundColor: ConstColors.BACKGROUND,
       body: Column(
         children: [
-          const SizedBox(height: 20,),
+          const SizedBox(height: 10,),
           Views.appBarViewHome2(
               TitleText: 'Wallet',
               SubTitleText: '',
@@ -40,9 +44,52 @@ class WalletPageMobilePortrait extends GetView<WalletLogic> {
                 );
               }
           ),
+          WalletPageTopLayer.walletPageTaopLayer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('My Portfolio',style: Texts.textStyles(
+                  textSize: FontSizes.BIG,
+                  fontWeight: FontWeight.w400,
+                  colors: ConstColors.TEXTWHITE,
+                ),
+                ),
+                Text('See All',style: Texts.textStyles(
+                  textSize: FontSizes.MEDIUM,
+                  fontWeight: FontWeight.w300,
+                  colors: ConstColors.TEXTWHITE,
+                ),
+                ),
+              ],
+            ),
+          ),
+          WalletPageMidLayer.walletPageMidLayer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('My Portfolio',style: Texts.textStyles(
+                  textSize: FontSizes.BIG,
+                  fontWeight: FontWeight.w400,
+                  colors: ConstColors.TEXTWHITE,
+                ),
+                ),
+                Text('See All',style: Texts.textStyles(
+                  textSize: FontSizes.MEDIUM,
+                  fontWeight: FontWeight.w300,
+                  colors: ConstColors.TEXTWHITE,
+                ),
+                ),
+              ],
+            ),
+          ),
+          WalletBottomLayer.walletPageBottomLayer(context: context),
         ],
       ),
-      bottomNavigationBar: WalletBottomLayer.walletPageBottomLayer(),
+      bottomNavigationBar: WalletBottomLayer.walletPageNavigationBottomLayer(),
     );
   }
 }

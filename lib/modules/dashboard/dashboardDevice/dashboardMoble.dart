@@ -21,52 +21,55 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
     Get.find<DashboardLogic>();
     return Scaffold(
       backgroundColor: ConstColors.BACKGROUND,
-      body: Column(
-        children: [
-          const SizedBox(height: 20,),
-          Views.appBarViewHome2(
-              TitleText: 'Hello Vlad',
-              SubTitleText: 'Welcome back!',
-              icon: Icons.notifications,
-              onPressed: (){
-                Get.snackbar(
-                  'Notification',
-                  'No notifications',
-                  snackPosition: SnackPosition.BOTTOM,
-                  backgroundColor: ConstColors.TRANSPARENT,
-                  colorText: ConstColors.GREY,
-                  margin: const EdgeInsets.all(20),
-                  icon: const Icon(
-                    Icons.thumb_up,
-                    color: ConstColors.BLUE,
+      body: SizedBox(
+        width: double.infinity,
+        height: MediaQuery.of(context).size.height,
+        child: Column(
+          children: [
+            const SizedBox(height: 20,),
+            Views.appBarViewHome2(
+                TitleText: 'Hello Vlad',
+                SubTitleText: 'Welcome back!',
+                icon: Icons.notifications,
+                onPressed: (){
+                  Get.snackbar(
+                    'Notification',
+                    'No notifications',
+                    snackPosition: SnackPosition.BOTTOM,
+                    backgroundColor: ConstColors.TRANSPARENT,
+                    colorText: ConstColors.GREY,
+                    margin: const EdgeInsets.all(20),
+                    icon: const Icon(
+                      Icons.thumb_up,
+                      color: ConstColors.BLUE,
+                    ),
+                    shouldIconPulse: false,
+                  );
+                } ),
+            HomePageTopLayer.homePageTopLayer(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Live price',style: Texts.textStyles(
+                    textSize: FontSizes.BIG,
+                    fontWeight: FontWeight.w400,
+                    colors: ConstColors.TEXTWHITE,
+                    ),
                   ),
-                  shouldIconPulse: false,
-                );
-              } ),
-          HomePageTopLayer.homePageTopLayer(),
-          const SizedBox(height: 15,),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Live price',style: Texts.textStyles(
-                  textSize: FontSizes.BIG,
-                  fontWeight: FontWeight.w400,
-                  colors: ConstColors.TEXTWHITE,
+                  Text('See All',style: Texts.textStyles(
+                    textSize: FontSizes.MEDIUM,
+                    fontWeight: FontWeight.w300,
+                    colors: ConstColors.TEXTWHITE,
+                    ),
                   ),
-                ),
-                Text('See All',style: Texts.textStyles(
-                  textSize: FontSizes.MEDIUM,
-                  fontWeight: FontWeight.w300,
-                  colors: ConstColors.TEXTWHITE,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          HomePageMidLayer.homePageMidLayer(),
-        ],
+            HomePageMidLayer.homePageMidLayer(),
+          ],
+        ),
       ),
       bottomNavigationBar: HomePageBottomLayer.homePageBottomLayer(),
     );

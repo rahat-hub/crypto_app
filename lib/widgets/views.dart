@@ -152,7 +152,7 @@ class Views{
 
   static profilePageBottomLayer2({image,onPressed,iconText}){
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: 0,
@@ -174,6 +174,54 @@ class Views{
           ],
         ),
         onPressed: () => onPressed(),
+      ),
+    );
+  }
+
+  static walletCardViewEvent({cardTitleName,subTitleName,cryptoImage,currentBalance,ratioLevel}){
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(cardTitleName,style: Texts.textStyles(
+                    colors: ConstColors.TEXTWHITE,
+                    fontWeight: FontWeight.w600,
+                    textSize: FontSizes.MEDIUM),
+                ),
+                Image.asset(cryptoImage,width: 20,),
+              ],
+            ),
+          ),
+          Text(subTitleName,style: Texts.textStyles(
+              colors: ConstColors.GREY,
+              fontWeight: FontWeight.w200,
+              textSize: FontSizes.SMALL),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(currentBalance,style: Texts.textStyles(
+                    colors: ConstColors.TEXTWHITE,
+                    fontWeight: FontWeight.w800,
+                    textSize: FontSizes.BIG),
+                ),
+                Text(ratioLevel,style: Texts.textStyles(
+                    colors: ConstColors.TEXTWHITE,
+                    fontWeight: FontWeight.w300,
+                    textSize: FontSizes.SMALL),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

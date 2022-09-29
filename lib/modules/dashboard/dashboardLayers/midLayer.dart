@@ -1,7 +1,6 @@
 import 'package:crypto_app/shared/assets/images.dart';
 import 'package:crypto_app/shared/constants/colors.dart';
 import 'package:flutter/material.dart';
-
 import '../../../widgets/views.dart';
 
 class HomePageMidLayer{
