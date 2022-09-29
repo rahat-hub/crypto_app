@@ -19,4 +19,11 @@ class Images{
   static const ltcChart ='assets/images/ltc_chart.png';
   static const xrpLogo ='assets/images/xrp_logo.png';
   static const xrpChart ='assets/images/xrp_chart.png';
+  static const historyIcon ='assets/icons/history_icon.png';
+  static const settingIcon ='assets/icons/setting_icon.png';
+  static const withDrawIcon ='assets/icons/withdraw_icon.png';
+  static const transferIcon ='assets/icons/transfer_icon.png';
+  static const statisticIcon ='assets/icons/statistic_icon.png';
+  static const portfolioIcon ='assets/icons/portfolio_icon.png';
+  static const walletIcon ='assets/icons/wallet_icon.png';
 }

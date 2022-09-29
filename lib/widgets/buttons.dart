@@ -3,14 +3,14 @@ import 'package:crypto_app/widgets/texts.dart';
 import 'package:flutter/material.dart';
 
 abstract class Buttons{
-  static buttons({text,onPressed,value = 0.0,circularValue = 0.0}){
+  static buttons({text,onPressed,value = 0.0,circularValue = 0.0,colorValue}){
     return Padding(
       padding: EdgeInsets.all(value),
       child: MaterialButton(
         minWidth: double.infinity,
         height: 60,
         onPressed: () => onPressed (),
-        color: ConstColors.BLUE,
+        color: colorValue,
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             color:  ConstColors.BLUE,

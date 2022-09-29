@@ -100,7 +100,8 @@ class SignInPageMobilePortrait extends GetView<SignInLogic> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 20.0, horizontal: 20.0),
                       child: Buttons.buttons(
-                        circularValue: 10.0,
+                          colorValue: ConstColors.BLUE,
+                          circularValue: 10.0,
                           text: "Sign In",
                           onPressed: () {
                             /*if (controller.formKey.currentState!.validate()) {

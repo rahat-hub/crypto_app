@@ -1,11 +1,19 @@
+import 'package:crypto_app/modules/carddetails/carddetails_binding.dart';
+import 'package:crypto_app/modules/carddetails/carddetails_view.dart';
 import 'package:crypto_app/modules/dashboard/dashboard_binding.dart';
 import 'package:crypto_app/modules/dashboard/dashboard_view.dart';
 import 'package:crypto_app/modules/introduction/introduction_binding.dart';
 import 'package:crypto_app/modules/introduction/introduction_view.dart';
 import 'package:crypto_app/modules/password_recovery/password_recovery_binding.dart';
 import 'package:crypto_app/modules/password_recovery/password_recovery_view.dart';
+import 'package:crypto_app/modules/profile/profile_binding.dart';
+import 'package:crypto_app/modules/profile/profile_view.dart';
 import 'package:crypto_app/modules/sign_in/sign_in_binding.dart';
 import 'package:crypto_app/modules/splash/splash_binding.dart';
+import 'package:crypto_app/modules/trading/trading_binding.dart';
+import 'package:crypto_app/modules/trading/trading_view.dart';
+import 'package:crypto_app/modules/wallet/wallet_binding.dart';
+import 'package:crypto_app/modules/wallet/wallet_view.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../modules/password_recovery/passwordRecoveryConfirm/password_recovey_confirm/password_recovey_confirm_binding.dart';
 import '../modules/password_recovery/passwordRecoveryConfirm/password_recovey_confirm/password_recovey_confirm_view.dart';
@@ -67,5 +75,33 @@ class AppRoutes{
         DashboardBinding(),
       ]
     ),
+    GetPage(
+        name: AppPages.PROFILE,
+        page: () => ProfilePage(),
+        bindings: [
+          ProfileBinding(),
+        ]
+    ),
+    GetPage(
+        name: AppPages.CARDDETAILS,
+        page: () => CarddetailsPage(),
+        bindings: [
+          CarddetailsBinding(),
+        ]
+    ),
+    GetPage(
+      name: AppPages.WALLET,
+      page: () => WalletPage(),
+      bindings: [
+        WalletBinding(),
+      ],
+    ),
+    GetPage(
+      name: AppPages.TRADING,
+      page: () => TradingPage(),
+      bindings: [
+        TradingBinding(),
+      ],
+    )
   ];
 }

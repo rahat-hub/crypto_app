@@ -145,8 +145,36 @@ class Views{
   }
   static homePageBottomLayer2({icon,onPressed}){
     return IconButton(
-      icon: Icon(icon, color: ConstColors.WHITE, size: 25),
+      icon: icon,
       onPressed: () => onPressed(),
+    );
+  }
+
+  static profilePageBottomLayer2({image,onPressed,iconText}){
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          backgroundColor: ConstColors.BACKGROUND,
+        ),
+        child: Row(
+          children: [
+            Image.asset(image),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Text(
+                iconText,
+                style: Texts.textStyles(
+                    colors: ConstColors.TEXTWHITE,
+                    textSize: FontSizes.BIG,
+                    fontWeight: FontWeight.w400),
+              ),
+            ),
+          ],
+        ),
+        onPressed: () => onPressed(),
+      ),
     );
   }
 }

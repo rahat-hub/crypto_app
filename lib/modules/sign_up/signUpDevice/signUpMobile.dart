@@ -158,6 +158,7 @@ class SignUpPageMobilePortrait extends GetView<SignUpLogic> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 20.0, horizontal: 20.0),
                       child: Buttons.buttons(
+                          colorValue: ConstColors.BLUE,
                           circularValue: 10.0,
                           text: "Sign Up",
                           onPressed: () {

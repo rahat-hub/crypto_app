@@ -26,6 +26,7 @@ class IntroductionPageMobilePortrait extends GetView<IntroductionLogic> {
           width: double.infinity,
           height: 100,
           child: Buttons.buttons(
+            colorValue: ConstColors.BLUE,
               text: 'Start Now',
               value: 30.0,
               circularValue: 5.0,

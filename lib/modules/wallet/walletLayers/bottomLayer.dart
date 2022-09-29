@@ -1,11 +1,11 @@
 import 'package:crypto_app/routes/app-pages.dart';
-import 'package:crypto_app/shared/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../shared/constants/colors.dart';
 import '../../../widgets/views.dart';
 
-class HomePageBottomLayer{
-  static homePageBottomLayer(){
+class WalletBottomLayer{
+  static walletPageBottomLayer(){
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
