@@ -10,4 +10,5 @@ abstract class AppPages{
   static const String CARDDETAILS = '/carddetails';
   static const String WALLET = '/wallet';
   static const String TRADING = '/trading';
+  static const String HISTORY = '/history';
 }

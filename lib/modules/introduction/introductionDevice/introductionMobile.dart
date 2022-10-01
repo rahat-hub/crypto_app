@@ -24,7 +24,7 @@ class IntroductionPageMobilePortrait extends GetView<IntroductionLogic> {
       globalBackgroundColor: ConstColors.BACKGROUND,
       globalFooter: SizedBox(
           width: double.infinity,
-          height: 100,
+          height: 100.0,
           child: Buttons.buttons(
             colorValue: ConstColors.BLUE,
               text: 'Start Now',
@@ -53,7 +53,7 @@ class IntroductionPageMobilePortrait extends GetView<IntroductionLogic> {
       next: const Icon(Icons.arrow_forward),
       //done: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600)),
       curve: Curves.easeOutCubic,
-      controlsMargin: const EdgeInsets.all(16),
+      controlsMargin: const EdgeInsets.all(16.0),
       controlsPadding: kIsWeb
           ? const EdgeInsets.all(12.0)
           : const EdgeInsets.fromLTRB(8.0, 4.0, 8.0, 4.0),

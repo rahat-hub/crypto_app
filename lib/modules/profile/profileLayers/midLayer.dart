@@ -1,5 +1,7 @@
+import 'package:crypto_app/routes/app-pages.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../shared/assets/images.dart';
 import '../../../widgets/views.dart';
@@ -178,6 +180,7 @@ class ProfileMidLayer{
           iconText: 'History',
           onPressed: (){
             print('hello');
+            Get.toNamed(AppPages.HISTORY);
           },
         ),
       ],

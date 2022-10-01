@@ -32,12 +32,12 @@ class Views{
     return PageViewModel(
       title: '',
       body: text,
-      image: Image.asset(imageValue, width: 350,alignment: Alignment.center),
+      image: Image.asset(imageValue, width: 350.0,alignment: Alignment.center),
       decoration: PageDecoration(
         bodyTextStyle: Texts.textStyles(textSize: FontSizes.BIG,fontWeight: FontWeight.w600),
         bodyPadding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
         //pageColor: Colors.white,
-        imagePadding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
+        imagePadding: const EdgeInsets.fromLTRB(0.0, 150.0, 0.0, 0.0),
       ),
     );
   }
@@ -143,9 +143,10 @@ class Views{
       ),
     );
   }
-  static homePageBottomLayer2({icon,onPressed}){
+  static homePageBottomLayer2({icon,onPressed,colorValue = ConstColors.TEXTWHITE}){
     return IconButton(
       icon: icon,
+      color: colorValue,
       onPressed: () => onPressed(),
     );
   }

@@ -3,17 +3,17 @@ import 'package:crypto_app/widgets/texts.dart';
 import 'package:flutter/material.dart';
 
 abstract class Buttons{
-  static buttons({text,onPressed,value = 0.0,circularValue = 0.0,colorValue}){
+  static buttons({text,width = double.infinity,height = 60.0,onPressed,value = 0.0,circularValue = 0.0,colorValue, BorderColor = ConstColors.BLUE}){
     return Padding(
       padding: EdgeInsets.all(value),
       child: MaterialButton(
-        minWidth: double.infinity,
-        height: 60,
+        minWidth: width,
+        height: height,
         onPressed: () => onPressed (),
         color: colorValue,
         shape: RoundedRectangleBorder(
-          side: const BorderSide(
-            color:  ConstColors.BLUE,
+          side: BorderSide(
+            color:  BorderColor,
           ),
           borderRadius: BorderRadius.circular(circularValue),
         ),

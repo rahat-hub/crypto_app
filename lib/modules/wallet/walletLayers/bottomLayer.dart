@@ -5,47 +5,55 @@ import '../../../shared/assets/images.dart';
 import '../../../shared/constants/colors.dart';
 import '../../../widgets/views.dart';
 
-class WalletBottomLayer{
-  static walletPageNavigationBottomLayer(){
+class WalletBottomLayer {
+  static walletPageNavigationBottomLayer() {
     return Container(
-      color: Colors.blue,
-      height: 50,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Views.homePageBottomLayer2(
-              icon: const Icon(Icons.grid_view,color: ConstColors.TEXTWHITE,size: 25,),
-              onPressed: (){
+              icon: const Icon(
+                Icons.grid_view,
+                size: 25,
+              ),
+              onPressed: () {
                 Get.offNamed(AppPages.DASHBOARD);
               }),
           Views.homePageBottomLayer2(
-              icon: const Icon(Icons.auto_graph_outlined,color: ConstColors.TEXTWHITE,size: 25,),
-              onPressed: (){
+              icon: const Icon(
+                Icons.auto_graph_outlined,
+                size: 25,
+              ),
+              onPressed: () {
                 Get.offNamed(AppPages.TRADING);
               }),
           Views.homePageBottomLayer2(
-              icon: const Icon(Icons.credit_card,color: ConstColors.TEXTWHITE,size: 25,),
-              onPressed: (){
+              icon: const Icon(
+                Icons.credit_card,
+                size: 25,
+              ),
+              colorValue: ConstColors.BLUE,
+              onPressed: () {
                 Get.offNamed(AppPages.WALLET);
               }),
           Views.homePageBottomLayer2(
-              icon: const Icon(Icons.person,color: ConstColors.TEXTWHITE,size: 25,),
-              onPressed: (){
+              icon: const Icon(
+                Icons.person,
+                size: 25,
+              ),
+              onPressed: () {
                 Get.offNamed(AppPages.PROFILE);
               }),
         ],
       ),
     );
   }
-  static walletPageBottomLayer({context}){
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15,),
-      child: SizedBox(
-        height: 200,
-        width: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: true,
+
+  static walletPageBottomLayer({context}) {
+    return Expanded(
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
           children: [
             Views.cardViewEvent(
                 logoImage: Images.btcLogo,
@@ -56,10 +64,12 @@ class WalletBottomLayer{
                 rightTitleText: '\$29,850.15',
                 rightSubText: '2.73 BTC'),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
-              child: Divider(thickness: 1,color: ConstColors.GREY,),
+              padding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              child: Divider(
+                thickness: 1,
+                color: ConstColors.GREY,
+              ),
             ),
-
             Views.cardViewEvent(
                 logoImage: Images.ethLogo,
                 leftTitleText: 'ETC',
@@ -69,8 +79,11 @@ class WalletBottomLayer{
                 rightTitleText: '\$10,850.15',
                 rightSubText: '47.61 ETC'),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
-              child: Divider(thickness: 1,color: ConstColors.GREY,),
+              padding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              child: Divider(
+                thickness: 1,
+                color: ConstColors.GREY,
+              ),
             ),
             Views.cardViewEvent(
                 logoImage: Images.ltcLogo,
@@ -81,8 +94,11 @@ class WalletBottomLayer{
                 rightTitleText: '\$3,676.76',
                 rightSubText: '39,27 LTC'),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
-              child: Divider(thickness: 1,color: ConstColors.GREY,),
+              padding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              child: Divider(
+                thickness: 1,
+                color: ConstColors.GREY,
+              ),
             ),
             Views.cardViewEvent(
                 logoImage: Images.xrpLogo,
@@ -93,8 +109,11 @@ class WalletBottomLayer{
                 rightTitleText: '\$5,242.62',
                 rightSubText: '16447,65 XRP'),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
-              child: Divider(thickness: 1,color: ConstColors.GREY,),
+              padding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              child: Divider(
+                thickness: 1,
+                color: ConstColors.GREY,
+              ),
             ),
             Views.cardViewEvent(
                 logoImage: Images.btcLogo,
@@ -105,8 +124,11 @@ class WalletBottomLayer{
                 rightTitleText: '\$29,850.15',
                 rightSubText: '2.73 BTC'),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
-              child: Divider(thickness: 1,color: ConstColors.GREY,),
+              padding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              child: Divider(
+                thickness: 1,
+                color: ConstColors.GREY,
+              ),
             ),
             Views.cardViewEvent(
                 logoImage: Images.ethLogo,
@@ -117,8 +139,11 @@ class WalletBottomLayer{
                 rightTitleText: '\$10,850.15',
                 rightSubText: '47.61 ETC'),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
-              child: Divider(thickness: 1,color: ConstColors.GREY,),
+              padding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              child: Divider(
+                thickness: 1,
+                color: ConstColors.GREY,
+              ),
             ),
             Views.cardViewEvent(
                 logoImage: Images.ltcLogo,
@@ -129,8 +154,11 @@ class WalletBottomLayer{
                 rightTitleText: '\$3,676.76',
                 rightSubText: '39,27 LTC'),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
-              child: Divider(thickness: 1,color: ConstColors.GREY,),
+              padding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              child: Divider(
+                thickness: 1,
+                color: ConstColors.GREY,
+              ),
             ),
             Views.cardViewEvent(
                 logoImage: Images.xrpLogo,

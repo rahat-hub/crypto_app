@@ -46,7 +46,7 @@ class WalletPageMobilePortrait extends GetView<WalletLogic> {
           ),
           WalletPageTopLayer.walletPageTaopLayer(),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -71,7 +71,7 @@ class WalletPageMobilePortrait extends GetView<WalletLogic> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('My Portfolio',style: Texts.textStyles(
+                Text('Live Price',style: Texts.textStyles(
                   textSize: FontSizes.BIG,
                   fontWeight: FontWeight.w400,
                   colors: ConstColors.TEXTWHITE,

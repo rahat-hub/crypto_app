@@ -21,10 +21,7 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
     Get.find<DashboardLogic>();
     return Scaffold(
       backgroundColor: ConstColors.BACKGROUND,
-      body: SizedBox(
-        width: double.infinity,
-        height: MediaQuery.of(context).size.height,
-        child: Column(
+      body: Column(
           children: [
             const SizedBox(height: 20,),
             Views.appBarViewHome2(
@@ -70,7 +67,6 @@ class HomePageMobilePortrait extends GetView<DashboardLogic> {
             HomePageMidLayer.homePageMidLayer(),
           ],
         ),
-      ),
       bottomNavigationBar: HomePageBottomLayer.homePageBottomLayer(),
     );
   }

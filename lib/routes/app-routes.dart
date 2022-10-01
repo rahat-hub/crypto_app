@@ -2,6 +2,8 @@ import 'package:crypto_app/modules/carddetails/carddetails_binding.dart';
 import 'package:crypto_app/modules/carddetails/carddetails_view.dart';
 import 'package:crypto_app/modules/dashboard/dashboard_binding.dart';
 import 'package:crypto_app/modules/dashboard/dashboard_view.dart';
+import 'package:crypto_app/modules/history/history_binding.dart';
+import 'package:crypto_app/modules/history/history_view.dart';
 import 'package:crypto_app/modules/introduction/introduction_binding.dart';
 import 'package:crypto_app/modules/introduction/introduction_view.dart';
 import 'package:crypto_app/modules/password_recovery/password_recovery_binding.dart';
@@ -102,6 +104,13 @@ class AppRoutes{
       bindings: [
         TradingBinding(),
       ],
-    )
+    ),
+    GetPage(
+      name: AppPages.HISTORY,
+      page: () => const HistoryPage(),
+      bindings: [
+        HistoryBinding(),
+      ],
+    ),
   ];
 }

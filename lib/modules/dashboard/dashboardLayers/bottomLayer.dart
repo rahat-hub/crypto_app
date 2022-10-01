@@ -10,7 +10,8 @@ class HomePageBottomLayer{
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Views.homePageBottomLayer2(
-            icon: const Icon(Icons.grid_view,color: ConstColors.TEXTWHITE,size: 25,),
+            icon: const Icon(Icons.grid_view,size: 25,),
+            colorValue: ConstColors.BLUE,
             onPressed: (){
               Get.offNamed(AppPages.DASHBOARD);
             }),
