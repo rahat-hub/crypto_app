@@ -65,7 +65,7 @@ class HistoryPageMobilePortrait extends GetView<HistoryLogic> {
                           showDialog(
                               context: context,
                               builder: (context) =>
-                                AlertDialog(
+                                const AlertDialog(
                                   title: Text("Transactions"),
                                   content: Text(''),
                                 )
