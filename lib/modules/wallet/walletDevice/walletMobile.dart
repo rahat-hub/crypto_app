@@ -5,7 +5,6 @@ import 'package:crypto_app/modules/wallet/wallet_logic.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
 import '../../../shared/constants/colors.dart';
 import '../../../shared/constants/font_sizes.dart';
 import '../../../widgets/texts.dart';

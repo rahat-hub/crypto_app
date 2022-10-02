@@ -1,33 +1,27 @@
+import 'package:crypto_app/shared/assets/images.dart';
+import 'package:crypto_app/shared/constants/colors.dart';
+import 'package:crypto_app/shared/constants/font_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import '../../../routes/app-pages.dart';
-import '../../../shared/assets/images.dart';
-import '../../../shared/constants/colors.dart';
-import '../../../shared/constants/font_sizes.dart';
+
 import '../../../widgets/texts.dart';
 
-class WalletPageTopLayer{
-  static walletPageTaopLayer(){
-    return MaterialButton(
-      onPressed: (){
-        Get.toNamed(AppPages.CARDDETAILS);
-      },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 5),
-        child: Container(
-          width: double.infinity,
-          height: 220,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            gradient: const LinearGradient(
-                colors: [Color(0xff828080),Color(0xff1F1D1D)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight
-            ),
+class CardDetailsePageTopLayer{
+  static cardDetailsePageTopLayer(){
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+      child: Container(
+        width: double.infinity,
+        height: 220,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: const LinearGradient(
+              colors: [Color(0xff828080),Color(0xff1F1D1D)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight
           ),
-          child: cardDesign(),
         ),
+        child: cardDesign(),
       ),
     );
   }
@@ -35,7 +29,7 @@ class WalletPageTopLayer{
 
 Widget cardDesign(){
   return Container(
-    padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 5),
+    padding: const EdgeInsets.all(18),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

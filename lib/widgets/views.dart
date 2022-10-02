@@ -226,4 +226,31 @@ class Views{
       ),
     );
   }
+
+  static cardDetailsSmallView({currency, value, icon}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
+      child: Container(
+        width: 130.0,
+        height: 30.0,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          gradient: const LinearGradient(colors: [
+            Color.fromARGB(255, 57, 57, 57),
+            Color.fromARGB(125, 85, 85, 85),
+            Color.fromARGB(140, 45, 45, 45),
+          ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Texts.texts(texts: currency, fontWeight: FontWeight.w500,textSize: FontSizes.REGULAR),
+            Texts.texts(texts: value, fontWeight: FontWeight.w500,textSize: FontSizes.REGULAR),
+            Icon(icon, color: ConstColors.WHITE),
+          ],
+        ),
+      ),
+    );
+  }
 }

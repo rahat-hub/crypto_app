@@ -3,25 +3,32 @@ import 'package:crypto_app/shared/constants/colors.dart';
 import 'package:crypto_app/shared/constants/font_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
+import '../../../routes/app-pages.dart';
 import '../../../widgets/texts.dart';
 
 class HomePageTopLayer{
   static homePageTopLayer(){
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-      child: Container(
-        width: double.infinity,
-        height: 220,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          gradient: const LinearGradient(
-            colors: [Color(0xff828080),Color(0xff1F1D1D)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight
+    return MaterialButton(
+      onPressed: (){
+        Get.toNamed(AppPages.CARDDETAILS);
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+        child: Container(
+          width: double.infinity,
+          height: 220,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            gradient: const LinearGradient(
+              colors: [Color(0xff828080),Color(0xff1F1D1D)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight
+            ),
           ),
+          child: cardDesign(),
         ),
-        child: cardDesign(),
       ),
     );
   }
