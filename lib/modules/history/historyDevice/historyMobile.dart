@@ -88,7 +88,7 @@ class HistoryPageMobilePortrait extends GetView<HistoryLogic> {
                                   content: Text(''),
                                   actions: [
                                     TextButton(
-                                      child: Text('Ok'),
+                                      child: const Text('Ok'),
                                       onPressed: () {
                                         print("Hello");
                                         Get.toNamed(AppPages.HISTORY);

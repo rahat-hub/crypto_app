@@ -8,11 +8,11 @@ class Password_recovey_confirmLogic extends GetxController {
   void onInit() {
     // TODO: implement onInit
     super.onInit();
-    _navigatetohome();
+    _navigateToHome();
   }
-  _navigatetohome() async{
-    await Future.delayed(Duration(milliseconds: 3000),(){});
-    Get.offNamed(AppPages.SIGNIN);
+  _navigateToHome() async{
+    await Future.delayed(const Duration(milliseconds: 3000),(){});
+    Get.offNamed(AppPages.RESETPASSWORD);
   }
   @override
   void onReady() {

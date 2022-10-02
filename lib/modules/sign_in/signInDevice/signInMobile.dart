@@ -10,6 +10,7 @@ import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import '../../../routes/app-pages.dart';
+import '../../../shared/assets/images.dart';
 import '../../../widgets/buttons.dart';
 
 class SignInPageMobilePortrait extends GetView<SignInLogic> {
@@ -23,16 +24,16 @@ class SignInPageMobilePortrait extends GetView<SignInLogic> {
     Get.find<SignInLogic>();
     return Scaffold(
       backgroundColor: ConstColors.BACKGROUND,
-      body: SafeArea(
-        child: Column(
-          children: [
-            Views.appBarView(
+      body: Column(
+        children: [
+          SizedBox(height: 30,),
+          Views.appBarView(
               text: 'Sign In',
-              onPressed: (){
+              onPressed: () {
                 Get.offNamed(AppPages.INTRODUCTION);
-              }
-            ),
-            SingleChildScrollView(
+              }),
+          Expanded(
+            child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: FormBuilder(
                 key: controller.formKey,
@@ -81,21 +82,74 @@ class SignInPageMobilePortrait extends GetView<SignInLogic> {
                         ),
                       ),
                     ),
-                    TextFieldView.formField(
-                        paddingValue: 20.0,
-                        name: 'Password',
-                        obscureText: true,
-                        key: controller.passFieldKey,
-                        label: '...........',
-                        inputText: TextInputType.visiblePassword,
-                        radiusValue: 10.0,
-                        letterSpace: 5.0,
-                        validator: FormBuilderValidators.compose([
-                          FormBuilderValidators.required(
-                              errorText: 'Please enter password'),
-                          FormBuilderValidators.minLength(6,allowEmpty: false,
-                              errorText: "Password Must be 6 character")
-                        ])),
+                    Obx(() {
+                      return TextFieldView.formField(
+                          passwordIcon: controller.isPasswordHidden.value
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          onTap: () {
+                            controller.isPasswordHidden.value =
+                                !controller.isPasswordHidden.value;
+                          },
+                          paddingValue: 20.0,
+                          name: 'Password',
+                          obscureText: controller.isPasswordHidden.value,
+                          key: controller.passFieldKey,
+                          label: '...........',
+                          inputText: TextInputType.visiblePassword,
+                          radiusValue: 10.0,
+                          letterSpace: 5.0,
+                          validator: FormBuilderValidators.compose([
+                            FormBuilderValidators.required(
+                                errorText: 'Please enter password'),
+                            FormBuilderValidators.minLength(6,
+                                allowEmpty: false,
+                                errorText: "Password Must be 6 character")
+                          ]));
+                    }),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        children: [
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Obx(() {
+                              return Checkbox(
+                                  value: controller.rememberMe.value,
+                                  checkColor: Colors.red,
+                                  //fillColor: MaterialStatePropertyAll(ConstColors.GREY),
+                                  activeColor: ConstColors.TEXTWHITE,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(2.0),
+                                  ),
+                                  side: BorderSide(width: 2.0,color: ConstColors.TEXTWHITE),
+                                  onChanged: (value) {
+                                    print(value);
+                                    controller.rememberMe.value = value!;
+                                  });
+                            }),
+                          ),
+                          Text(
+                            'Remember me',
+                            style: Texts.textStyles(
+                                colors: ConstColors.TEXTWHITE,
+                                textSize: FontSizes.REGULAR,
+                                fontWeight: FontWeight.w100),
+                          ),
+                          Expanded(
+                            //alignment: Alignment.centerRight,
+                            child: Buttons.textButton(
+                                texts: "Forgot password?",
+                                color: ConstColors.TEXTGREY,
+                                align: Alignment.centerRight,
+                                fontWeight: FontWeight.w500,
+                                onPressed: () {
+                                  Get.offNamed(AppPages.PASSWORDRECOVERY);
+                                }),
+                          ),
+                        ],
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 20.0, horizontal: 20.0),
@@ -104,35 +158,42 @@ class SignInPageMobilePortrait extends GetView<SignInLogic> {
                           circularValue: 10.0,
                           text: "Sign In",
                           onPressed: () {
-                            /*if (controller.formKey.currentState!.validate()) {
-                              //controller.formKey.currentState!.save();
-
-                            }*/
-                            Get.offAllNamed(AppPages.DASHBOARD);
+                            if (controller.formKey.currentState!.validate()) {
+                              controller.formKey.currentState!.save();
+                              Get.offAllNamed(AppPages.DASHBOARD);
+                            }
                           }),
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Buttons.textButton(texts: "Forgot password?",color: ConstColors.TEXTGREY,align: Alignment.centerRight,fontWeight: FontWeight.w500,onPressed: (){
-                        Get.offNamed(AppPages.PASSWORDRECOVERY);
-                      }),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Texts.texts(texts: "You are not registered ?",textSize: FontSizes.REGULAR),
-                        Buttons.textButton(texts: "Create an account",color: ConstColors.BUTTON,fontWeight: FontWeight.w500,textSize: FontSizes.REGULAR,
-                            onPressed: (){
+                        Texts.texts(
+                            texts: "You are not registered ?",
+                            textSize: FontSizes.REGULAR),
+                        Buttons.textButton(
+                            texts: "Create an account",
+                            color: ConstColors.BUTTON,
+                            fontWeight: FontWeight.w500,
+                            textSize: FontSizes.REGULAR,
+                            onPressed: () {
                               Get.toNamed(AppPages.SIGNUP);
                             }),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CardDesign.cardDesign(imageName: Images.appleLogo),
+                        CardDesign.cardDesign(imageName: Images.googleLogo),
+                        CardDesign.cardDesign(imageName: Images.mataLogo),
                       ],
                     ),
                   ],
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -149,4 +210,18 @@ class SignInPageMobileLandscape extends GetView<SignInLogic> {
     Get.find<SignInLogic>();
     return Container();
   }
+}
+
+class CardDesign{
+     static cardDesign({imageName}){
+       return Container(
+         width: 100,
+         height: 50,
+         decoration: BoxDecoration(
+           borderRadius: BorderRadius.circular(20),
+           color: ConstColors.GREY,
+         ),
+         child: Image.asset(imageName,width: 70,),
+       );
+     }
 }

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 class TextFieldView{
-  static formField({key,validator,name,label,obscureText,inputText,radiusValue,paddingValue,letterSpace,textSize}){
+  static formField({key,validator,name,label,obscureText,inputText,radiusValue,paddingValue,letterSpace,textSize,passwordIcon,onTap}){
     return Padding(
       padding: EdgeInsets.all(paddingValue),
       child: FormBuilderTextField(
@@ -25,6 +25,10 @@ class TextFieldView{
               width: 2,
             ),
             borderRadius: BorderRadius.circular(radiusValue),
+          ),
+          suffix: InkWell(
+            child: Icon(passwordIcon, color: Colors.grey,size: 20,),
+            onTap: () => onTap(),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(radiusValue),

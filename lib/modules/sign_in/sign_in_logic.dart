@@ -7,6 +7,8 @@ class SignInLogic extends GetxController {
   var formKey = GlobalKey<FormBuilderState>();
   var emailFieldKey = GlobalKey<FormBuilderFieldState>();
   var passFieldKey = GlobalKey<FormBuilderFieldState>();
+  var isPasswordHidden = true.obs;
+  var rememberMe = false.obs;
 
   @override
   void onInit() {

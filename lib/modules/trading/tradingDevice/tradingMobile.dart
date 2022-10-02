@@ -25,7 +25,7 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
       body: Column(
         children: [
           const SizedBox(
-            height: 20,
+            height: 20.0,
           ),
           Views.appBarViewHome2(
               TitleText: 'Trading',
@@ -38,7 +38,7 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
                   snackPosition: SnackPosition.BOTTOM,
                   backgroundColor: ConstColors.TRANSPARENT,
                   colorText: ConstColors.GREY,
-                  margin: const EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20.0),
                   icon: const Icon(
                     Icons.thumb_up,
                     color: ConstColors.BLUE,
@@ -90,10 +90,10 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
-                height: 60,
-                width: 60,
+                height: 60.0,
+                width: 60.0,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.0),
                   color: ConstColors.BTC_BACK_COLOR,
                 ),
                 child: Image.asset(
@@ -109,7 +109,7 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
                 ),
               ),
               const SizedBox(
-                width: 150,
+                width: 150.0,
               ),
               Text(
                 'USDT',
@@ -132,23 +132,15 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
           Image.asset(
             Images.tradingChart_1,
             width: double.infinity,
-            height: 250,
+            height: 250.0,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Buttons.buttons(
-                  height: 50,
-                  width: 50,
-                  circularValue: 10,
-                  colorValue: ConstColors.GREY,
-                  text: '1H',
-                  BorderColor: ConstColors.BACKGROUND,
-                  onPressed: () {}),
-              Buttons.buttons(
-                  height: 50,
-                  width: 50,
-                  circularValue: 10,
+                  height: 50.0,
+                  width: 50.0,
+                  circularValue: 10.0,
                   colorValue: ConstColors.GREY,
                   text: '1H',
                   BorderColor: ConstColors.BACKGROUND,
@@ -156,7 +148,15 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
               Buttons.buttons(
                   height: 50.0,
                   width: 50.0,
-                  circularValue: 10,
+                  circularValue: 10.0,
+                  colorValue: ConstColors.GREY,
+                  text: '1H',
+                  BorderColor: ConstColors.BACKGROUND,
+                  onPressed: () {}),
+              Buttons.buttons(
+                  height: 50.0,
+                  width: 50.0,
+                  circularValue: 10.0,
                   colorValue: ConstColors.GREY,
                   text: '1D',
                   BorderColor: ConstColors.BACKGROUND,
@@ -164,7 +164,7 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
               Buttons.buttons(
                   height: 50.0,
                   width: 50.0,
-                  circularValue: 10,
+                  circularValue: 10.0,
                   colorValue: ConstColors.GREY,
                   text: '1W',
                   BorderColor: ConstColors.BACKGROUND,
@@ -172,7 +172,7 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
               Buttons.buttons(
                   height: 50.0,
                   width: 50.0,
-                  circularValue: 10,
+                  circularValue: 10.0,
                   colorValue: ConstColors.GREY,
                   text: '1M',
                   BorderColor: ConstColors.BACKGROUND,
@@ -180,7 +180,7 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
               Buttons.buttons(
                   height: 50.0,
                   width: 50.0,
-                  circularValue: 10,
+                  circularValue: 10.0,
                   colorValue: ConstColors.GREY,
                   text: '1Y',
                   BorderColor: ConstColors.BACKGROUND,
@@ -188,7 +188,7 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
               Buttons.buttons(
                   height: 50.0,
                   width: 50.0,
-                  circularValue: 10,
+                  circularValue: 10.0,
                   colorValue: ConstColors.GREY,
                   text: 'All',
                   BorderColor: ConstColors.BACKGROUND,
@@ -197,24 +197,25 @@ class TradingPageMobilePortrait extends GetView<TradingLogic> {
           ),
           Expanded(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                  Buttons.buttons(
-                   width: 100,
-                   height: 50,
+                   width: 100.0,
+                   height: 50.0,
                    text: 'Buy',
                    colorValue: ConstColors.BLUE,
-                   circularValue: 10,
+                   circularValue: 10.0,
                    BorderColor: ConstColors.BLUE,
                    onPressed: (){
 
                    }
                  ),
                 Buttons.buttons(
-                    width: 100,
-                    height: 50,
+                    width: 100.0,
+                    height: 50.0,
                     text: 'Buy',
                     colorValue: ConstColors.BACKGROUND,
-                    circularValue: 10,
+                    circularValue: 10.0,
                     BorderColor: ConstColors.BLUE,
                     onPressed: (){
 

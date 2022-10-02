@@ -11,4 +11,5 @@ abstract class AppPages{
   static const String WALLET = '/wallet';
   static const String TRADING = '/trading';
   static const String HISTORY = '/history';
+  static const String RESETPASSWORD = '/resetpassword';
 }

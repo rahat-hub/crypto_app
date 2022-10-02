@@ -27,4 +27,7 @@ class Images{
   static const portfolioIcon ='assets/icons/portfolio_icon.png';
   static const walletIcon ='assets/icons/wallet_icon.png';
   static const tradingChart_1 = 'assets/images/trading_chart_1.png';
+  static const googleLogo = 'assets/logos/google_logo.png';
+  static const appleLogo = 'assets/logos/apple_logo.png';
+  static const mataLogo = 'assets/logos/mata_logo.png';
 }

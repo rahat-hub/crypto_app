@@ -10,6 +10,8 @@ import 'package:crypto_app/modules/password_recovery/password_recovery_binding.d
 import 'package:crypto_app/modules/password_recovery/password_recovery_view.dart';
 import 'package:crypto_app/modules/profile/profile_binding.dart';
 import 'package:crypto_app/modules/profile/profile_view.dart';
+import 'package:crypto_app/modules/resetpassword/resetpassword_binding.dart';
+import 'package:crypto_app/modules/resetpassword/resetpassword_view.dart';
 import 'package:crypto_app/modules/sign_in/sign_in_binding.dart';
 import 'package:crypto_app/modules/splash/splash_binding.dart';
 import 'package:crypto_app/modules/trading/trading_binding.dart';
@@ -110,6 +112,13 @@ class AppRoutes{
       page: () => const HistoryPage(),
       bindings: [
         HistoryBinding(),
+      ],
+    ),
+    GetPage(
+      name: AppPages.RESETPASSWORD,
+      page: () => const ResetPasswordPage(),
+      bindings: [
+        ResetpasswordBinding(),
       ],
     ),
   ];
