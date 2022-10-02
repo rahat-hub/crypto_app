@@ -14,7 +14,8 @@ class HomePageBottomLayer{
             colorValue: ConstColors.BLUE,
             onPressed: (){
               Get.offNamed(AppPages.DASHBOARD);
-            }),
+            },
+            ),
         Views.homePageBottomLayer2(
             icon: const Icon(Icons.auto_graph_outlined,color: ConstColors.TEXTWHITE,size: 25,),
             onPressed: (){

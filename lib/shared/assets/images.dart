@@ -5,7 +5,7 @@ class Images{
   static const introductionLogo_2 = 'assets/images/introduction_image_2.png';
   static const introductionLogo_3 = 'assets/images/introduction_image_3.png';
   static const creditCardPayPassIcon = 'assets/icons/credit_card_pay_pass_icon.svg';
-  static const creditCardSimLogo = 'assets/logos/credit_card_sim_logo.svg';
+  static const creditCardSimLogo = 'assets/logos/credit_card_sim_logo.png';
   static const masterCardLogo = 'assets/logos/master_card_logo.svg';
   static const rectangle_2_1 = 'assets/logos/rectangle_2.1.svg';
   static const rectangle_2_2 = 'assets/logos/rectangle_2.2.svg';
@@ -26,4 +26,5 @@ class Images{
   static const statisticIcon ='assets/icons/statistic_icon.png';
   static const portfolioIcon ='assets/icons/portfolio_icon.png';
   static const walletIcon ='assets/icons/wallet_icon.png';
+  static const tradingChart_1 = 'assets/images/trading_chart_1.png';
 }

@@ -38,7 +38,7 @@ Widget cardDesign(){
             child: SvgPicture.asset(Images.creditCardPayPassIcon),
         ),
         const SizedBox(height: 10,),
-        SvgPicture.asset(Images.creditCardSimLogo,width: 50,),
+        Image.asset(Images.creditCardSimLogo,width: 50,),
         const SizedBox(height: 10,),
         Text('1234    5678    90000   0000',style: Texts.textStyles(
           colors: ConstColors.TEXTWHITE,
